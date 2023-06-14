@@ -77,7 +77,7 @@ public class AdminServlet extends HttpServlet {
                     request.setAttribute("numUser", dao.countUser());
                     request.setAttribute("numRuby", dao.countRuby());
                     request.setAttribute("listUser", listUser);
-                    request.getRequestDispatcher("/AdminDashboardOverview.jsp").forward(request, response);
+                    request.getRequestDispatcher("AdminDashboardOverview.jsp").forward(request, response);
                     break;
                 case "Statistics":
                     String thisweek = dao.numVisitorInWeek(LocalDate.now());
@@ -93,7 +93,7 @@ public class AdminServlet extends HttpServlet {
                     String moneyInLastYear = dao.MoneyInYear(yearNow-1);
                     request.setAttribute("moneyInThisYear", moneyInThisYear);
                     request.setAttribute("moneyInLastYear", moneyInLastYear);
-                    request.getRequestDispatcher("/AdminDashboardStatistics.jsp").forward(request, response);
+                    request.getRequestDispatcher("AdminDashboardStatistics.jsp").forward(request, response);
                     break;
                 default:
                     break;

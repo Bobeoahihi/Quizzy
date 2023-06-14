@@ -74,7 +74,7 @@ public class ChangeAvatar extends HttpServlet {
                 } else {
                     filename = item.getName();
                     if (filename == null || filename.equals("")) {
-                         request.getRequestDispatcher("/ChangePass.jsp").forward(request, response);
+                         request.getRequestDispatcher("ChangePass.jsp").forward(request, response);
                         break;
                     } else {
                         filename = id + date + ".jpg";
@@ -95,7 +95,7 @@ public class ChangeAvatar extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("userSeisson", user);
             request.setAttribute("messageAvatar", "Success");
-            request.getRequestDispatcher("/ChangePass.jsp").forward(request, response);
+            request.getRequestDispatcher("ChangePass.jsp").forward(request, response);
         } catch (Exception e) {
         }
 
