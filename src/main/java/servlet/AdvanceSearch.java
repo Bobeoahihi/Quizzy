@@ -40,7 +40,7 @@ public class AdvanceSearch extends HttpServlet {
 //            }
             request.setAttribute("quizList", quiz);
 
-            request.getRequestDispatcher("AdvanceSearch.jsp").forward(request, response);
+            request.getRequestDispatcher("/AdvanceSearch.jsp").forward(request, response);
         }
     }
 
