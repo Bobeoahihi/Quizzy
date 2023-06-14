@@ -86,7 +86,7 @@ public class AttemptExamServlet extends HttpServlet {
         request.setAttribute("minute", minute);
         request.setAttribute("listQuesInExam", listQuesInExam);
         request.setAttribute("quiz_id",quiz_id);
-        request.getRequestDispatcher("/TakeExam.jsp").forward(request, response);
+        request.getRequestDispatcher("TakeExam.jsp").forward(request, response);
     }
 
     /**
